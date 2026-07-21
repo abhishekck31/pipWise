@@ -15,7 +15,7 @@ export default function Home() {
                 pipWise Trading Journal
               </h1>
               <p className="mt-6 text-lg leading-8 text-zinc-300">
-                Track your trades, review your habits, and grow with better decision-making.
+                Track your trades, review your habits, and build clarity with every decision.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
