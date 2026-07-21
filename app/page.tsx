@@ -22,7 +22,7 @@ export default function Home() {
                   href="#features"
                   className="rounded-full bg-emerald-400 px-5 py-3 font-medium text-slate-950 transition hover:bg-emerald-300"
                 >
-                  Explore the product
+                  See what it does
                 </a>
                 <a
                   href="#story"
