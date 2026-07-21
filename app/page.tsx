@@ -35,7 +35,7 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-6 text-sm text-zinc-300 shadow-lg shadow-black/20">
               <p className="text-2xl font-semibold text-white">Built for serious traders</p>
               <p className="mt-2 max-w-xs leading-7">
-                Capture every setup, every lesson, and every emotional shift in one calm command center.
+                Capture every setup, every lesson, and every emotional shift in one calm command center built for focus.
               </p>
             </div>
           </div>
