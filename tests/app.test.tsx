@@ -8,7 +8,7 @@ describe('Home page', () => {
     render(<Home />);
 
     expect(
-      screen.getByRole('heading', { name: /modern trading review, stripped to signal/i }),
+      screen.getByRole('heading', { name: /a trading journal shaped like a premium operating system/i }),
     ).toBeInTheDocument();
     expect(screen.getByText(/black, white, and precise/i)).toBeInTheDocument();
   });
