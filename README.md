@@ -1,12 +1,13 @@
 # pipWise
 
-pipWise is a Next.js trading journal for capturing trades, reviewing performance, and reflecting on market decisions.
+pipWise is a minimal Next.js trading journal for capturing trades, reviewing performance, and reflecting on market decisions.
 
 ## Features
 
 - Track trades with entry, exit, and P&L details
 - Capture journal notes and mood for each session
 - Use Prisma models for persistence and NextAuth-compatible auth scaffolding
+- Follow a strict black, white, red, and green visual system for signal-driven interfaces
 
 ## Getting started
 
