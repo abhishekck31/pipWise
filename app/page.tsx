@@ -4,104 +4,140 @@ import { HeroCard } from "./components/hero-card";
 const featureCards = [
   {
     title: "Trade memory",
-    body: "Capture every setup, entry, exit, and lesson in one elegant workspace.",
+    body: "Capture every setup, entry, exit, and lesson in one disciplined record.",
   },
   {
     title: "Mindset tracking",
-    body: "Reveal the emotional context that shapes your toughest decisions.",
+    body: "Reveal the emotional context behind the decisions that matter most.",
   },
   {
     title: "Reflection engine",
-    body: "Turn every review into a system of habits, not just a scrapbook of trades.",
+    body: "Turn each review into a repeatable system, not just a scrapbook of trades.",
   },
+];
+
+const performanceRows = [
+  { label: "Win rate", value: "64%", change: "+8%", tone: "positive" as const },
+  { label: "Average R", value: "+1.8R", change: "+0.4R", tone: "positive" as const },
+  { label: "Drawdown", value: "-2.1%", change: "-0.6%", tone: "negative" as const },
+  { label: "Rule breaks", value: "3", change: "-4", tone: "positive" as const },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.25),_transparent_35%),linear-gradient(135deg,_#020617_0%,_#0f172a_55%,_#111827_100%)] px-6 py-16 text-zinc-50 sm:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8">
-        <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl xl:p-14">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(34,197,94,0.07),_transparent_24%),linear-gradient(180deg,_#050505_0%,_#080808_52%,_#050505_100%)] px-4 py-4 text-foreground sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4">
+        <section className="reveal overflow-hidden rounded-[2rem] border border-border bg-surface/85 p-6 shadow-[0_40px_140px_rgba(0,0,0,0.55)] backdrop-blur-xl sm:p-8 xl:p-10">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
-              <p className="mb-4 inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300">
-                pipWise • The trading journal for founders of discipline
+              <p className="inline-flex rounded-full border border-border bg-white/5 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-muted">
+                pipWise Journal • discipline over impulse
               </p>
-              <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                pipWise Trading Journal
+              <h1 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+                Modern trading review, stripped to signal.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-                Track your trades, review your habits, and build clarity with every decision.
+              <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+                Track trades, review execution, and surface the habits that move P&L. The interface stays black, white, and precise, with red and green used only where performance deserves attention.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="#launch"
-                  className="rounded-full bg-emerald-400 px-5 py-3 font-medium text-slate-950 transition hover:bg-emerald-300"
+                  href="#dashboard"
+                  className="rounded-full border border-foreground bg-foreground px-5 py-3 text-sm font-medium text-background hover:-translate-y-0.5 hover:bg-transparent hover:text-foreground"
                 >
-                  Launch the experience
+                  Open dashboard
                 </a>
                 <a
-                  href="#story"
-                  className="rounded-full border border-white/15 px-5 py-3 font-medium text-white transition hover:bg-white/10"
+                  href="#insights"
+                  className="rounded-full border border-border bg-transparent px-5 py-3 text-sm font-medium text-foreground hover:-translate-y-0.5 hover:border-foreground hover:bg-white/5"
                 >
-                  Why it matters
+                  See insights
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-md rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 text-sm text-zinc-300 shadow-2xl shadow-black/40">
-              <p className="text-2xl font-semibold text-white">Built for serious traders</p>
-              <p className="mt-3 leading-7">
-                Capture every setup, every lesson, and every emotional shift in one calm command center designed for focus.
-              </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <HeroCard title="Clarity" value="Learn from each decision" />
-                <HeroCard title="Momentum" value="Stay consistent over time" />
+
+            <div className="w-full max-w-lg rounded-[1.75rem] border border-border bg-surface-strong p-5 shadow-[0_18px_80px_rgba(0,0,0,0.4)] sm:p-6">
+              <div className="flex items-center justify-between border-b border-border pb-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-muted">Live review</p>
+                  <p className="mt-2 text-2xl font-semibold text-foreground">Execution snapshot</p>
+                </div>
+                <div className="rounded-full border border-positive/30 bg-positive/10 px-3 py-1 text-sm font-medium text-positive">
+                  +1.8R
+                </div>
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <HeroCard title="Bias" value="Neutral and measured" />
+                <HeroCard title="Focus" value="Rules followed in 91% of trades" tone="positive" />
+              </div>
+              <div className="mt-5 grid gap-3">
+                {performanceRows.map((row) => (
+                  <div key={row.label} className="flex items-center justify-between rounded-2xl border border-border bg-black/30 px-4 py-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.32em] text-muted">{row.label}</p>
+                      <p className="mt-1 text-lg font-medium text-foreground">{row.value}</p>
+                    </div>
+                    <span className={row.tone === "positive" ? "text-positive" : "text-negative"}>
+                      {row.change}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="launch" className="grid gap-6 rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-[0_20px_80px_rgba(0,0,0,0.25)] lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300">A premium workflow</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-              Think like a team. Review like a pro.
+        <section id="dashboard" className="reveal reveal-delay-1 grid gap-4 rounded-[2rem] border border-border bg-surface/85 p-5 shadow-[0_24px_90px_rgba(0,0,0,0.35)] sm:p-6 lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
+          <div className="rounded-[1.75rem] border border-border bg-black/25 p-6">
+            <p className="text-xs uppercase tracking-[0.36em] text-muted">System view</p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              Minimal interface. Maximum accountability.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-              From the first trade to the final reflection, pipWise gives you a deliberate way to turn raw experience into lasting advantage.
+            <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              Every surface is designed to stay out of the way. Clean contrast keeps the focus on trades, while restrained motion and thin borders add the premium SaaS feel.
             </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <HeroCard title="Signal" value="Green when the process is working" tone="positive" />
+              <HeroCard title="Risk" value="Red when the plan drifts" tone="negative" />
+              <HeroCard title="Review" value="White space for calm decisions" />
+            </div>
           </div>
+
           <div className="grid gap-4 sm:grid-cols-2">
-            {featureCards.map((item) => (
-              <article key={item.title} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-zinc-400">{item.body}</p>
+            {featureCards.map((item, index) => (
+              <article
+                key={item.title}
+                className={`rounded-[1.5rem] border border-border bg-surface-strong p-5 ${index === 0 ? "reveal-delay-1" : index === 1 ? "reveal-delay-2" : "reveal-delay-3"}`}
+              >
+                <p className="text-xs uppercase tracking-[0.34em] text-muted">0{index + 1}</p>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted">{item.body}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.2)] sm:grid-cols-3 sm:p-8">
-          <HeroCard title="Clarity" value="Turn each trade into a decision you can learn from" />
-          <HeroCard title="Consistency" value="Build routines that make your review process effortless" />
-          <HeroCard title="Confidence" value="Use evidence, not emotion, to shape your next move" />
+        <section className="reveal reveal-delay-2 grid gap-4 rounded-[2rem] border border-border bg-surface/85 p-5 shadow-[0_24px_90px_rgba(0,0,0,0.3)] sm:grid-cols-3 sm:p-6 lg:p-8">
+          <HeroCard title="Clarity" value="Every trade reads like a decision log" />
+          <HeroCard title="Consistency" value="Routine stays visible, measurable, and repeatable" tone="positive" />
+          <HeroCard title="Resilience" value="Risk stays obvious when the plan starts to slip" tone="negative" />
         </section>
 
-        <section id="story" className="grid gap-6 rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-[0_20px_80px_rgba(0,0,0,0.2)] lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
+        <section id="insights" className="reveal reveal-delay-3 grid gap-6 rounded-[2rem] border border-border bg-surface/85 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.3)] lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300">Why it exists</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-              Great traders don’t just track P&L — they understand themselves.
+            <p className="text-xs font-semibold uppercase tracking-[0.36em] text-muted">Why it exists</p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              Great traders do not just track P&L. They learn the pattern behind it.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-              pipWise helps you connect the numbers to the psychology, so your trading journal becomes a true performance system, not just a logbook.
+            <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              pipWise connects the numbers to behavior, so the journal becomes a performance system instead of a static logbook.
             </p>
           </div>
-          <div className="rounded-[1.5rem] border border-emerald-400/20 bg-emerald-400/10 p-6 text-zinc-200">
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-300">Built for</p>
+          <div className="rounded-[1.5rem] border border-border bg-black/30 p-6 text-muted">
+            <p className="text-xs uppercase tracking-[0.36em] text-foreground">Built for</p>
             <ul className="mt-4 space-y-3 text-sm leading-7">
-              <li>• discretionary traders seeking clarity</li>
-              <li>• systematic traders building consistency</li>
-              <li>• ambitious learners refining execution</li>
+              <li>Discretionary traders seeking sharper post-trade review</li>
+              <li>Systematic traders comparing rules against actual execution</li>
+              <li>Ambitious learners refining consistency with simple feedback loops</li>
             </ul>
           </div>
         </section>
