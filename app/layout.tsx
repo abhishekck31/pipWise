@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "pipWise Trading Journal",
-  description: "A polished trading journal for tracking performance and reflections.",
+  title: "pipWise Journal",
+  description: "A minimal trading journal for disciplined performance review.",
 };
 
 export default function RootLayout({
@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className="h-full scroll-smooth antialiased">
+      <body className="min-h-full bg-background text-foreground antialiased">{children}</body>
     </html>
   );
 }
