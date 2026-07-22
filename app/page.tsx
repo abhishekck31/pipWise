@@ -25,9 +25,9 @@ const performanceRows = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white px-4 py-5 text-foreground sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6">
-        <header className="reveal flex items-center justify-between rounded-full border border-border bg-white px-5 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+    <main className="min-h-screen bg-white px-4 py-4 text-foreground sm:px-6 lg:px-8 lg:py-6">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:gap-8">
+        <header className="reveal sticky top-4 z-20 flex items-center justify-between rounded-full border border-border bg-white/90 px-5 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.04)] backdrop-blur-xl">
           <div>
             <p className="text-xs uppercase tracking-[0.38em] text-muted">pipWise Journal</p>
             <p className="mt-1 text-sm text-foreground">Minimal performance review for traders</p>
@@ -48,8 +48,8 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="reveal overflow-hidden rounded-[2.25rem] border border-border bg-white shadow-[0_24px_80px_rgba(0,0,0,0.06)]">
-          <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
+        <section className="reveal overflow-hidden rounded-[2.5rem] border border-border bg-white shadow-[0_24px_80px_rgba(0,0,0,0.05)]">
+          <div className="grid gap-0 lg:grid-cols-[1.12fr_0.88fr]">
             <div className="flex flex-col justify-between gap-10 p-8 sm:p-10 lg:p-12 xl:p-14">
               <div className="max-w-3xl">
                 <p className="inline-flex rounded-full border border-border bg-white px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-muted">
@@ -127,8 +127,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="dashboard" className="reveal reveal-delay-1 grid gap-4 rounded-[2rem] border border-border bg-white p-5 shadow-[0_16px_50px_rgba(0,0,0,0.04)] sm:p-6 lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
-          <div className="rounded-[1.75rem] border border-border bg-surface-strong p-6 lg:p-8">
+        <section id="dashboard" className="reveal reveal-delay-1 grid gap-4 rounded-[2rem] border border-border bg-white p-5 shadow-[0_16px_50px_rgba(0,0,0,0.04)] sm:p-6 lg:grid-cols-[1.08fr_0.92fr] lg:p-8">
+          <div className="rounded-[1.75rem] border border-border bg-white p-6 lg:p-8">
             <p className="text-xs uppercase tracking-[0.36em] text-muted">System view</p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
               Minimal interface. Maximum accountability.
@@ -157,13 +157,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="review" className="reveal reveal-delay-2 grid gap-4 rounded-[2rem] border border-border bg-white p-5 shadow-[0_16px_50px_rgba(0,0,0,0.04)] sm:grid-cols-3 sm:p-6 lg:p-8">
-          <HeroCard title="Clarity" value="Every trade reads like a decision log" />
-          <HeroCard title="Consistency" value="Routine stays visible, measurable, and repeatable" tone="positive" />
-          <HeroCard title="Resilience" value="Risk stays obvious when the plan starts to slip" tone="negative" />
-        </section>
-
-        <section id="insights" className="reveal reveal-delay-3 grid gap-6 rounded-[2rem] border border-border bg-white p-6 shadow-[0_16px_50px_rgba(0,0,0,0.04)] lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
+        <section id="insights" className="reveal reveal-delay-2 grid gap-6 rounded-[2rem] border border-border bg-white p-6 shadow-[0_16px_50px_rgba(0,0,0,0.04)] lg:grid-cols-[1fr_1fr] lg:p-8">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.36em] text-muted">Why it exists</p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
@@ -173,13 +167,49 @@ export default function Home() {
               pipWise connects the numbers to behavior, so the journal becomes a performance system instead of a static logbook.
             </p>
           </div>
-          <div className="rounded-[1.5rem] border border-border bg-surface-strong p-6 text-muted">
-            <p className="text-xs uppercase tracking-[0.36em] text-foreground">Built for</p>
-            <ul className="mt-4 space-y-3 text-sm leading-7">
-              <li>Discretionary traders seeking sharper post-trade review</li>
-              <li>Systematic traders comparing rules against actual execution</li>
-              <li>Ambitious learners refining consistency with simple feedback loops</li>
-            </ul>
+
+          <div className="rounded-[1.75rem] border border-border bg-surface-strong p-6">
+            <p className="text-xs uppercase tracking-[0.36em] text-muted">Built for</p>
+            <div className="mt-5 grid gap-3">
+              <div className="rounded-2xl border border-border bg-white px-4 py-4 shadow-[0_8px_24px_rgba(0,0,0,0.03)]">
+                <p className="text-sm font-medium text-foreground">Discretionary traders</p>
+                <p className="mt-1 text-sm leading-6 text-muted">Sharper post-trade review with a cleaner decision trail.</p>
+              </div>
+              <div className="rounded-2xl border border-border bg-white px-4 py-4 shadow-[0_8px_24px_rgba(0,0,0,0.03)]">
+                <p className="text-sm font-medium text-foreground">Systematic traders</p>
+                <p className="mt-1 text-sm leading-6 text-muted">Compare rules against execution without visual noise.</p>
+              </div>
+              <div className="rounded-2xl border border-border bg-white px-4 py-4 shadow-[0_8px_24px_rgba(0,0,0,0.03)]">
+                <p className="text-sm font-medium text-foreground">Ambitious learners</p>
+                <p className="mt-1 text-sm leading-6 text-muted">Simple feedback loops that make consistency visible.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="review" className="reveal reveal-delay-3 flex flex-col gap-5 rounded-[2rem] border border-border bg-white p-6 shadow-[0_16px_50px_rgba(0,0,0,0.04)] lg:flex-row lg:items-center lg:justify-between lg:p-8">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.36em] text-muted">Start with clarity</p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              Turn every session into a sharper next session.
+            </h2>
+            <p className="mt-4 text-base leading-8 text-muted sm:text-lg">
+              The landing page stays calm, premium, and easy to scan. The product message is simple: review better, trade better, repeat.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#dashboard"
+              className="rounded-full border border-foreground bg-foreground px-5 py-3 text-sm font-medium text-white hover:-translate-y-0.5"
+            >
+              Open dashboard
+            </a>
+            <a
+              href="#insights"
+              className="rounded-full border border-border bg-white px-5 py-3 text-sm font-medium text-foreground hover:-translate-y-0.5 hover:border-foreground"
+            >
+              Explore insights
+            </a>
           </div>
         </section>
       </div>

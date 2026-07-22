@@ -19,7 +19,7 @@
   --color-border: var(--border);
   --color-positive: var(--positive);
   --color-negative: var(--negative);
-  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-sans: "Google Sans", "Product Sans", "Inter", "Segoe UI", system-ui, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, monospace;
 }
 
@@ -36,6 +36,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   min-height: 100vh;
 }
 
